@@ -13,6 +13,11 @@ describe("<Heading />", () => {
       "font-size": theme.font.sizes.xhuge,
       "text-transform": "none",
     });
+  });
+
+  it("should match snapshot", () => {
+    renderTheme(<Heading>Text</Heading>);
+    const heading = screen.getByRole("heading", { name: "Text" });
 
     expect(heading).toMatchSnapshot();
   });
@@ -24,7 +29,6 @@ describe("<Heading />", () => {
     expect(heading).toHaveStyle({
       "text-transform": "uppercase",
     });
-    expect(heading).toMatchSnapshot();
   });
 
   it("should render with white color", () => {
@@ -36,7 +40,6 @@ describe("<Heading />", () => {
       "font-size": theme.font.sizes.xhuge,
       "text-transform": "none",
     });
-    expect(heading).toMatchSnapshot();
   });
   // Sizes
   it("should render heading in small size", () => {
@@ -46,7 +49,6 @@ describe("<Heading />", () => {
     expect(heading).toHaveStyle({
       "font-size": theme.font.sizes.medium,
     });
-    expect(heading).toMatchSnapshot();
   });
 
   it("should render heading in medium size", () => {
@@ -56,7 +58,6 @@ describe("<Heading />", () => {
     expect(heading).toHaveStyle({
       "font-size": theme.font.sizes.large,
     });
-    expect(heading).toMatchSnapshot();
   });
 
   it("should render heading in large size", () => {
@@ -66,7 +67,6 @@ describe("<Heading />", () => {
     expect(heading).toHaveStyle({
       "font-size": theme.font.sizes.xlarge,
     });
-    expect(heading).toMatchSnapshot();
   });
 
   it("should render heading in small size", () => {
@@ -76,7 +76,6 @@ describe("<Heading />", () => {
     expect(heading).toHaveStyle({
       "font-size": theme.font.sizes.xhuge,
     });
-    expect(heading).toMatchSnapshot();
   });
   //@media
   it("should render correct font-size (large) when the screen is less than 768px", () => {
@@ -86,7 +85,6 @@ describe("<Heading />", () => {
     expect(heading).toHaveStyleRule("font-size", theme.font.sizes.xlarge, {
       media: theme.media.lteMedium,
     });
-    expect(heading).toMatchSnapshot();
   });
 
   it("should render the correct html heading element", () => {
@@ -94,6 +92,5 @@ describe("<Heading />", () => {
     const h6 = container.querySelector("h6");
 
     expect(h6.tagName.toLowerCase()).toBe("h6");
-    expect(h6).toMatchSnapshot();
   });
 });
