@@ -22,17 +22,17 @@ const mediaFont = (theme) => css`
   }
 `;
 
-const titleCase = (upperCase) => css`
-  text-transform: ${upperCase ? "uppercase" : "none"};
+const titleCase = (uppercase) => css`
+  text-transform: ${uppercase ? "uppercase" : "none"};
 `;
 
 export const Title = styled.h1`
-  ${({ theme, colorDark, size, upperCase }) => css`
+  ${({ theme, colorDark, size, uppercase }) => css`
     color: ${colorDark
-      ? theme.colors.lightGrayColor
-      : theme.colors.primaryColor};
+      ? theme.colors.primaryColor
+      : theme.colors.lightGrayColor};
 
     ${titleSize[size](theme)};
-    ${titleCase(upperCase)};
+    ${titleCase(uppercase)};
   `}
 `;
