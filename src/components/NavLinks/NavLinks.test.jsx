@@ -27,7 +27,7 @@ describe("NavLinks", () => {
   });
 
   it("should match snapshot", () => {
-    renderTheme(<NavLinks />);
-    expect(screen.queryAllByText(/links/i)).toMatchSnapshot();
+    const { container } = renderTheme(<NavLinks />);
+    expect(container).toMatchSnapshot();
   });
 });
