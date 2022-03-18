@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Heading /> should render correct font-size (large) when the screen is less than 768px 1`] = `
+.c0 {
+  color: #0A1128;
+  font-size: 6.4rem;
+  text-transform: none;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    font-size: 4.0rem;
+  }
+}
+
+<h1
+  class="c0"
+>
+  Text
+</h1>
+`;
+
+exports[`<Heading /> should render heading in large size 1`] = `
+.c0 {
+  color: #0A1128;
+  font-size: 4.0rem;
+  text-transform: none;
+}
+
+<h1
+  class="c0"
+>
+  Text
+</h1>
+`;
+
+exports[`<Heading /> should render heading in medium size 1`] = `
+.c0 {
+  color: #0A1128;
+  font-size: 3.2rem;
+  text-transform: none;
+}
+
+<h1
+  class="c0"
+>
+  Text
+</h1>
+`;
+
+exports[`<Heading /> should render heading in small size 1`] = `
+.c0 {
+  color: #0A1128;
+  font-size: 2.4rem;
+  text-transform: none;
+}
+
+<h1
+  class="c0"
+>
+  Text
+</h1>
+`;
+
+exports[`<Heading /> should render heading in small size 2`] = `
+.c0 {
+  color: #0A1128;
+  font-size: 6.4rem;
+  text-transform: none;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    font-size: 4.0rem;
+  }
+}
+
+<h1
+  class="c0"
+>
+  Text
+</h1>
+`;
+
+exports[`<Heading /> should render in UPPERCASE 1`] = `
+.c0 {
+  color: #0A1128;
+  font-size: 6.4rem;
+  text-transform: uppercase;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    font-size: 4.0rem;
+  }
+}
+
+<h1
+  class="c0"
+>
+  Text
+</h1>
+`;
+
+exports[`<Heading /> should render the correct html heading element 1`] = `
+.c0 {
+  color: #0A1128;
+  font-size: 6.4rem;
+  text-transform: none;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    font-size: 4.0rem;
+  }
+}
+
+<h6
+  class="c0"
+>
+  Text
+</h6>
+`;
+
+exports[`<Heading /> should render with default values 1`] = `
+.c0 {
+  color: #0A1128;
+  font-size: 6.4rem;
+  text-transform: none;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    font-size: 4.0rem;
+  }
+}
+
+<h1
+  class="c0"
+>
+  Text
+</h1>
+`;
+
+exports[`<Heading /> should render with white color 1`] = `
+.c0 {
+  color: #EEE;
+  font-size: 6.4rem;
+  text-transform: none;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    font-size: 4.0rem;
+  }
+}
+
+<h1
+  class="c0"
+>
+  Text
+</h1>
+`;
