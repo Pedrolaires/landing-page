@@ -4,8 +4,12 @@ import { Footer } from ".";
 
 describe("Footer", () => {
   it("should render", () => {
-    const { container } = renderTheme(<Footer html={"<h1>Olá</h1>"}></Footer>);
+    renderTheme(<Footer html={"<h1>Olá</h1>"}></Footer>);
     expect(screen.getByRole("heading", { name: "Olá" })).toBeInTheDocument();
-    //expect(container).toMatchSnapshot();
   });
+
+  /*   it("should match snapshot", () => {
+    const { container } = renderTheme(<Footer html={"<h1>Olá</h1>"}></Footer>);
+    expect(container).toMatchSnapshot();
+  }); */
 });

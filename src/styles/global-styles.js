@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 html {
   // para utilizar rem como pixel
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
