@@ -14,9 +14,8 @@ export const Container = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     background: ${theme.colors.whiteColor};
-    border-bottom: ${theme.colors.lightGrayColor};
+    border-bottom: ${theme.colors.mediumGrayColor};
     transition: all 300ms ease-in-out;
 
     > ${SectionContainer} {

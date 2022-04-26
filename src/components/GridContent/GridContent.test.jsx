@@ -5,7 +5,7 @@ import { GridContent } from ".";
 import mock from "./mock";
 
 describe("GridContent", () => {
-  it("should grid content", () => {
+  it("should render grid content", () => {
     const { container } = renderTheme(<GridContent {...mock} />);
     expect(container).toMatchSnapshot();
   });
