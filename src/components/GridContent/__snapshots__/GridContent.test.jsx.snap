@@ -57,15 +57,15 @@ exports[`GridContent should grid content 1`] = `
       <div
         class="c2"
       >
-        <h1
+        <h2
           class="c3"
         >
           Um título aleatorio
-        </h1>
+        </h2>
         <div
           class="c4"
         >
-          <p
+          <div
             class="c5"
           >
             <h1>
@@ -162,7 +162,7 @@ exports[`GridContent should grid content 1`] = `
   
               </code>
             </pre>
-          </p>
+          </div>
         </div>
       </div>
     </div>
