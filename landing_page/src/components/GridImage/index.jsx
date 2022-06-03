@@ -4,17 +4,25 @@ import { SectionBackground } from "../SectionBackground";
 import { TextComponent } from "../TextComponent";
 import * as Styled from "./styles";
 
-export const GridImage = ({ background, description, title, grid }) => {
+export const GridImage = ({
+  background,
+  description,
+  title,
+  grid,
+  sectionId = "",
+}) => {
   return (
-    <SectionBackground background={background}>
+    <SectionBackground sectionId={sectionId} background={background}>
       <Styled.Container>
         <Heading size="huge" uppercase colorDark={!background} as="h2">
           {title}
         </Heading>
         <TextComponent>{description}</TextComponent>
         <Styled.Grid>
-          {grid.map((element) => (
-            <Styled.GridElement key={element.imageSrc}>
+          {grid.map((element, index) => (
+            <Styled.GridElement
+              key={`${element.imageSrc}-${element.altText}-${index}`}
+            >
               <Styled.ImageContainer
                 src={element.imageSrc}
                 alt={element.altText}
@@ -32,6 +40,10 @@ GridImage.propTypes = {
   title: P.string.isRequired,
   description: P.string.isRequired,
   grid: P.arrayOf(
-    P.shape({ altText: P.string.isRequired, imageSrc: P.string.isRequired }),
+    P.shape({
+      altText: P.string.isRequired,
+      imageSrc: P.string.isRequired,
+    }),
   ).isRequired,
+  sectionId: P.string,
 };

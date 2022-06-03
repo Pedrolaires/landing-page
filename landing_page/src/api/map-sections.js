@@ -7,8 +7,7 @@ export const mapSections = (sections = []) => {
       return mapSectionContent(section);
     }
     if (section.__component === "section.section-grid") {
-      const { __component: { text_grid = [], image_grid = [] } = null } =
-        section;
+      const { text_grid = [], image_grid = [] } = section;
 
       if (text_grid.length > 0) {
         return mapTextGrid(section);
@@ -90,6 +89,14 @@ export const mapImageGrid = (section = {}) => {
     title,
     description,
     background,
-    grid,
+    grid: grid.map((img) => {
+      const {
+        image: { data = [{}] },
+      } = img;
+      const { attributes = {} } = data[0];
+      const { url: imageSrc = "", alternativeText: altText = "" } = attributes;
+      console.log(imageSrc, altText);
+      return { imageSrc, altText };
+    }),
   };
 };

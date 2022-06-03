@@ -15,8 +15,8 @@ export const Container = styled.footer`
       font-size: ${theme.font.sizes.small};
     }
     & ${SectionContainer}{
-      padding-top: 0;
-      padding-bottom: 0;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
 
   `}

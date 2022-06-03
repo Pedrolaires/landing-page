@@ -9,6 +9,11 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
+.table{
+  width:100%;
+  overflow-y: auto;
+}
+
 html {
   // para utilizar rem como pixel
   font-size: 62.5%;

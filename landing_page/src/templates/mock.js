@@ -21,16 +21,18 @@ function Home() {
 
   useEffect(() => {
     const load = async () => {
-      const pathName = location.pathname.replace(/[^a-z0-9-_]/gi, "");
-      const slug = pathName ? pathName : "landing-page";
+      const pathName = location.pathName.replace(/[^a-z0-9-_]/gi, "");
+      const slug = pathName ? pathName : "landingPage";
 
       try {
         const dataFetch = await fetch(
           `https://strapi-v4-lp.herokuapp.com/api/pages/?filters[slug]=${slug}&populate=deep`,
         );
         const json = await dataFetch.json();
+        //console.log(json);
         const { attributes } = json.data[0];
         const pageData = mapData([attributes]);
+        //console.log(pageData);
         setData(() => pageData[0]);
       } catch (e) {
         setData(undefined);
@@ -53,7 +55,7 @@ function Home() {
       document.title = `Carregando... | ${config.siteName}`;
     }
     if (data && data.title) {
-      document.title = `${data.title} | ${config.siteName}`;
+      document.title = `${data.title} | ${config.siteNamte}`;
     }
   }, [data]);
 
@@ -67,6 +69,7 @@ function Home() {
 
   const { menu, sections, footerHtml, slug } = data;
   const { links, text, link, imageSrc } = menu;
+  console.log(sections);
   return (
     <Base
       links={links}
