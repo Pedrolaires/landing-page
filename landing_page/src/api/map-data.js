@@ -9,7 +9,7 @@ export const mapData = (pagesData = { data: [{ attributes: {} }] }) => {
       Slug: slug = "",
       Title: title = "",
       sections = [],
-      menu = {},
+      menu = [{}],
     } = attributes;
 
     return {
@@ -17,7 +17,7 @@ export const mapData = (pagesData = { data: [{ attributes: {} }] }) => {
       slug,
       title,
       sections: mapSections(sections),
-      menu: mapMenu(menu),
+      menu: mapMenu(menu[0]),
     };
   });
 };
